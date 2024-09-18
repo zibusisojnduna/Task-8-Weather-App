@@ -6,6 +6,8 @@ const App = () => {
   const [weather, setWeather] = useState(null)
   const [city, setCity] = useState()
   const [error, setError] = useState()
+  const [background, setBackground] = useState()
+  
 
   const apiKey = "38a49cb10c2d174c5a2a6a95742d23df"
 
@@ -45,8 +47,8 @@ const App = () => {
           <h2>{weather.name}</h2>
           <p>{weather.weather[0].description}</p>
           <p>Tempreture: {weather.main.temp} C</p>
-          <p>Humidity: {weather.main.humidity}</p>
-          <p>Wind Speed: {weather.wind.speed} m/s</p>
+          <p>Humidity: {weather.main.humidity}%</p>
+          <p>Wind Speed: {weather.wind.speed} kph</p>
         </div>
       )}
     </div>
