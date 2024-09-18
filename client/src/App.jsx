@@ -22,7 +22,8 @@ const App = () => {
         
       })
       setWeather(response.data)
-      setError()  
+      setError() 
+    
     }catch (error) {
       setError("City not found")
       setWeather(null)
@@ -34,8 +35,18 @@ const App = () => {
     fetchWeather()
   }
 
+  // const updateBackgound = (weatherType) => {
+  //   const background = {
+  //     Clear:"url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fclear%2520sky%2F&psig=AOvVaw0nxX-1KVTp31VbNXreCDE0&ust=1726752834962000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMi8munOzIgDFQAAAAAdAAAAABAE)",
+  //     Cloudy:"url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACloudy_sky_%252826171935906%2529.jpg&psig=AOvVaw1jnE8gKN1zj97Wtq6tbgVZ&ust=1726753181708000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLj_uZHQzIgDFQAAAAAdAAAAABAE)",
+  //     Rain:"url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Drain%2Bsky&psig=AOvVaw0r8_qx03i93dqPWKaL-ZgI&ust=1726753790052000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCS0qTRzIgDFQAAAAAdAAAAABAE)",
+  //     Snow:"url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fsnowing-sky&psig=AOvVaw3QahJSdIxLT0gK-Tw6dZQU&ust=1726754015591000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMix3pDSzIgDFQAAAAAdAAAAABAE)"
+  //   }
+  //   setBackground(background[weatherType])
+  // }
+
   return(
-    <div className="App">
+    <div className="App" >
       <h1>Weather App</h1>
       <form onSubmit={handleSearch}>
         <input type="text" placeholder="Enter City" value={city} onChange={(e) => setCity(e.target.value)}/>
